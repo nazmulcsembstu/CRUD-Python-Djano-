@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'tasks/style.css' %}">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<div class="center-column">
+	
+<h3>Delete Task</h3>
+
+<p>Are you sure to delete "{{item}}"?</p>
+
+<a class="btn btn-info" href="{% url 'list' %}">Cancel</a>
+
+<form method="POST" action="">
+	{% csrf_token %}
+	<input class="btn btn-danger" type="submit" name="Confirm">
+</form>
+
+</div>
